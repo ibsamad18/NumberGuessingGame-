@@ -8,7 +8,8 @@ public class Main {
         int guess;
         int attempts = 0;
         int min = 0;
-        int max = 10;
+        int max = 20;
+        String plural;
         int randomNo = random.nextInt(min , max );
 
         System.out.println("....NUMBER GUESSING GAME....");
@@ -17,18 +18,19 @@ public class Main {
             System.out.print("Enter a random number: ");
             guess = scanner.nextInt();
             attempts++;
+            plural = (attempt > 1)? "s" : "";
 
-            if(guess > randomNo){
-                System.out.println("That is higher than our special number");
+           if(guess > randomNo){
+                System.out.println("That's higher than our random number");
             }
             else if (guess < randomNo) {
-                System.out.println("That is lower than our special number");
+                System.out.println("That's lower than our random number");
             }
 
         }while (guess != randomNo);
 
-        System.out.print("You have won!, you picked the correct number.");
-        System.out.printf("You made %d attempts\n", attempts);
+        System.out.print("Hurray! you picked the correct number.");
+        System.out.printf("You made %d attempts%s\n", attempts,plural);
 
 
 
