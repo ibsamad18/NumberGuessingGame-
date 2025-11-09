@@ -18,7 +18,7 @@ public class Main {
             System.out.print("Enter a random number: ");
             guess = scanner.nextInt();
             attempts++;
-            plural = (attempt > 1)? "s" : "";
+            plural = (attempts > 1)? "s" : "";
 
            if(guess > randomNo){
                 System.out.println("That's higher than our random number");
